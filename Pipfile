@@ -1,0 +1,18 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+black = "*"
+pylint = "*"
+
+[packages]
+graphscraper = ">=0.5"
+requests = ">=2.22"
+
+[requires]
+python_version = "3.7"
+
+[pipenv]
+allow_prereleases = true
