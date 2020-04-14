@@ -25,7 +25,7 @@ Loading a node that is not in the local database yet:
 # load data from the PatentsView API. Its default value is `False`, and the
 # argument can be omitted if the given patent is already in the local database.
 patent_number = "4733665"  # Stent patent
-stent_patent = g.nodes.get_node_by_name(patent_number, can_validate_and_load=True)
+stent_patent = graph.nodes.get_node_by_name(patent_number, can_validate_and_load=True)
 ```
 
 Accessing a node's neighbors (cited and cited-by patents):
