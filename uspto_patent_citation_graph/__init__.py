@@ -14,6 +14,8 @@ __license__ = "MIT"
 __url__ = "https://github.com/volfpeter/uspto-patent-citation-graph"
 __version__ = "0.2002.0"
 
+PATENTS_VIEW_ENDPOINT = "https://api.patentsview.org/patents/query"
+
 
 class USPTOPatentCitationGraph(Graph):
 
@@ -92,7 +94,7 @@ class USPTOPatentCitationNode(Node):
 
         query = {"patent_number": self.name}
         fields = ["cited_patent_number", "cited_patent_title", "citedby_patent_number", "citedby_patent_title"]
-        response = requests.post("https://www.patentsview.org/api/patents/query", json={"q": query, "f": fields})
+        response = requests.post(PATENTS_VIEW_ENDPOINT, json={"q": query, "f": fields})
         if response.status_code != 200:
             raise ValueError("Request failed")
 
