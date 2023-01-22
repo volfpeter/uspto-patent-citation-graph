@@ -36,6 +36,13 @@ for neighbor in stent_patent.neighbors:
     print(f" - {neighbor.name}: {neighbor.external_id}")
 ```
 
+## Related projects
+
+You can find related projects here:
+
+- [graphscraper](https://github.com/volfpeter/graphscraper)
+- [localclustering](https://github.com/volfpeter/localclustering)
+
 ## Community guidelines
 
 Any form of constructive contribution is welcome:
